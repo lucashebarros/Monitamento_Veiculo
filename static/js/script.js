@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <b>Total Price:</b> R$${record.total_price.toFixed(2)}
             `);
 
-            // Função para formatar a data/hora
+            // Função para formatar a data/hora no formato dd/mm/yyyy 00:00:00
             function formatDateTime(dateTime) {
                 const date = new Date(dateTime);
                 const day = String(date.getDate()).padStart(2, '0');
