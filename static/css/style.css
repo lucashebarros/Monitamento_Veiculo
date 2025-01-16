@@ -73,12 +73,13 @@ footer {
     padding: 20px 0;
     text-align: center;
     width: 100%;
+    position: relative;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -93,11 +94,12 @@ footer {
 .footer-section h3 {
     margin-bottom: 10px;
     font-size: 1.2em;
+    color: #f39c12;
 }
 
 .footer-section p, .footer-section a {
     margin: 5px 0;
-    color: white;
+    color: #ecf0f1;
     text-decoration: none;
 }
 
@@ -107,6 +109,16 @@ footer {
 
 .footer-section .fas, .footer-section .fab {
     margin-right: 8px;
+}
+
+/* Social media icons */
+.footer-section.social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.social ul li {
+    margin: 5px 0;
 }
 
 /* Responsive styling */
