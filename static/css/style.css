@@ -73,7 +73,6 @@ footer {
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    position: relative;
 }
 
 .footer-container {
@@ -89,6 +88,7 @@ footer {
     flex: 1;
     padding: 10px;
     min-width: 200px;
+    text-align: left; /* Adiciona alinhamento à esquerda para seções internas */
 }
 
 .footer-section h3 {
@@ -125,6 +125,10 @@ footer {
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        text-align: left;
+        text-align: center; /* Alinhamento centralizado para dispositivos móveis */
+    }
+
+    .footer-section {
+        text-align: center;
     }
 }
