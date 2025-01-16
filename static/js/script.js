@@ -21,12 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <b>Total Price:</b> R$${record.total_price.toFixed(2)}
             `);
 
+            // Função para formatar a data/hora
+            function formatDateTime(dateTime) {
+                const date = new Date(dateTime);
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const year = date.getFullYear();
+                const hours = String(date.getHours()).padStart(2, '0');
+                const minutes = String(date.getMinutes()).padStart(2, '0');
+                const seconds = String(date.getSeconds()).padStart(2, '0');
+                return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+            }
+
             // Adicionar dados ao relatório
             const tbody = document.querySelector('#report-table tbody');
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${record.vehicle}</td>
-                <td>${record.transaction_date}</td>
+                <td>${formatDateTime(record.transaction_date)}</td>
                 <td>${record.odometer}</td>
                 <td>${record.point_of_sale.name}</td>
                 <td>${record.point_of_sale.city}, ${record.point_of_sale.state}</td>
