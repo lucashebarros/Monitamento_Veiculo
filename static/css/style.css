@@ -2,27 +2,66 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
-h1 {
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    margin-top: 20px;
+    border-bottom: 2px solid #388E3C;
 }
-#map {
-    height: 60vh; /* Ajustar altura do mapa */
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
-#report-container {
+
+main {
     padding: 20px;
 }
+
+#map {
+    height: 60vh; /* Ajustar altura do mapa */
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#report-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
 }
+
 th {
-    background-color: #f2f2f2;
+    background-color: #4CAF50;
+    color: white;
     text-align: left;
+}
+
+td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.fa-truck {
+    margin-right: 10px;
 }
