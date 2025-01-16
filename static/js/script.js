@@ -20,6 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 <b>Unit Price:</b> R$${record.unit_price.toFixed(2)}<br>
                 <b>Total Price:</b> R$${record.total_price.toFixed(2)}
             `);
+
+            // Adicionar dados ao relatório
+            const tbody = document.querySelector('#report-table tbody');
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${record.vehicle}</td>
+                <td>${record.transaction_date}</td>
+                <td>${record.odometer}</td>
+                <td>${record.point_of_sale.name}</td>
+                <td>${record.point_of_sale.city}, ${record.point_of_sale.state}</td>
+                <td>${record.product}</td>
+                <td>${record.quantity.toFixed(2)}</td>
+                <td>R$${record.unit_price.toFixed(2)}</td>
+                <td>R$${record.total_price.toFixed(2)}</td>
+            `;
+            tbody.appendChild(row);
         });
     });
 });
