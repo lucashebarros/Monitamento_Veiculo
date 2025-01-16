@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vehicle Monitoring</title>
+    <title>Monitoramento de Veículos</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
 </head>
 <body>
+    <h1>Monitoramento de Veículos</h1>
     <div id="map"></div>
+    <div id="report-container">
+        <h2>Relatório de Veículos e Abastecimentos</h2>
+        <table id="report-table">
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Data/Hora</th>
+                    <th>Hodômetro</th>
+                    <th>Ponto de Venda</th>
+                    <th>Localização</th>
+                    <th>Produto</th>
+                    <th>Quantidade Abastecida</th>
+                    <th>Valor Unitário (R$)</th>
+                    <th>Faturamento Total (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Conteúdo gerado pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
     <script src="/static/js/script.js"></script>
 </body>
 </html>
